@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Cart - Poorna</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html" class="logo">Poorna</a>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#products">Products</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+                <li><a href="cart.html">Cart (<span id="cart-count">0</span>)</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="cart">
+            <h1>Your Shopping Cart</h1>
+            <div id="cart-items"></div>
+            <p>Total: ₹<span id="cart-total">0.00</span></p>
+            <button id="checkout-button" class="cta-button">Proceed to Checkout</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Poorna. All rights reserved.</p>
+    </footer>
+
+    <div id="checkout-popup" class="popup">
+        <div class="popup-content">
+            <h2>Contact Details</h2>
+            <form id="contact-form">
+                <input type="text" id="name" placeholder="Full Name" required>
+                <input type="text" id="address" placeholder="Address" required>
+                <input type="tel" id="phone" placeholder="Phone Number" required>
+                <p>Total Amount to Pay: ₹<span id="popup-total">0.00</span></p>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="payment-popup" class="popup">
+        <div class="popup-content">
+            <h2>Payment Details</h2>
+            <p>Total Amount to Pay: ₹<span id="payment-total">0.00</span></p>
+            <p>Please pay using Google Pay:</p>
+            <p>Phone Number: 7012913208</p>
+            <p>UPI ID: generalbros360@oksbi</p>
+            <button id="complete-payment">Click here when you complete the payment</button>
+        </div>
+    </div>
+
+    <div id="success-popup" class="popup">
+        <div class="popup-content">
+            <h2>Order Placed Successfully!</h2>
+            <p>Thank you for your purchase. Your order has been placed and will be processed soon.</p>
+            <button id="close-success-popup" class="cta-button">Close</button>
+        </div>
+    </div>
+
+    <script src="js/cart.js"></script>
+</body>
+</html>
